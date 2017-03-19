@@ -1,0 +1,8 @@
+function FindProxyForURL(url, host)
+{
+// If the hostname matches, send direct.
+    if (shExpMatch(host, "(*horizonblue.com|*.bcbsnj.com)"))
+        return "PROXY wallproxy.corpads.local:80; DIRECT";
+		
+		return "DIRECT";	
+}
